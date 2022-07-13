@@ -1,0 +1,153 @@
+/* Make base font-size 62.5% so that 1rem is 10px */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.75rem;
+    line-height: 1.5;
+    background-color: #fde6ff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: .625rem;
+    line-height: 1.1;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem 0 2rem 3rem;
+    background-color: white; 
+    min-height: 100%;
+    border-radius: 8pt 0 0 8pt;
+    outline-style: dotted;
+    outline-color: rgb(230, 146, 240);
+    outline-width: .4rem;
+}
+
+header h1{
+    padding: 10rem 2rem .3rem;
+    font-size: 5rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 2rem .3rem;
+    font-size: 2rem;
+}
+
+/* Main section */
+/* Make it so that the "About Me" title sits above the about me body when the screen gets smaller. */
+.about-me {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem 1rem 2rem 0;
+    background-color: white;
+    min-height: 100%;
+    border-radius: 0 8pt 8pt 0;
+    max-width: 70%;
+    outline-style: dotted;
+    outline-color: rgb(230, 146, 240);
+    outline-width: .4rem
+}
+
+.about-me h2 {
+    font-size: 3rem;
+    padding: 1rem 2rem 1rem 1rem;
+}
+
+.about-body {
+    min-height: 20rem;
+    padding: 1rem 1rem .5rem 2rem;
+    background-color:rgb(230, 146, 240);
+    border-radius: 0 8pt 8pt 0;
+    margin: 2rem 1rem 2rem 0;
+    min-width: 70%;
+    opacity: 1.0;
+}
+
+/*
+.about-body:hover{
+    opacity: 1.0;
+} 
+Kind of fun... not sure yet lol. */
+
+.my-work {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem 0 5rem 6rem;
+    background-color: white;
+    border-radius: 8pt 0 0 8pt;
+    outline-style: dotted;
+    outline-color: rgb(230, 146, 240);
+    outline-width: .4rem;
+}
+
+.my-work h2 {
+    font-size: 3rem;
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+.my-work p {
+    padding: 0 1rem 2rem 2rem;
+}
+
+/* .work-head */
+
+.applications {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+.applications div {
+    background-color:rgb(230, 146, 240);
+    margin: 1.5rem;
+    min-width: 40%;
+}
+
+.first-app {
+    flex: 5 0 auto;
+}
+
+.second-app {
+    flex: 1 1 auto;
+}
+
+.third-app {
+    flex: 1 1 auto;
+}
+
+.fourth-app {
+    flex: 1 1 auto;
+}
+
+/* Footer. Check out https://www.web-eau.net/blog/10-best-footer-html-css-snippets for a good footer idea! */
+
+/* When the screen is 768px or less, the navigation links fall under the title */
+@media screen and (max-width: 768px) {
+    header {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
