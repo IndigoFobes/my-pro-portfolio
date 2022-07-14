@@ -32,9 +32,9 @@ header {
     background-color: white; 
     min-height: 100%;
     border-radius: 8pt 0 0 8pt;
-    outline-style: dotted;
+   /* outline-style: dotted;
     outline-color: rgb(230, 146, 240);
-    outline-width: .4rem;
+    outline-width: .4rem;*/
 }
 
 header h1{
@@ -49,10 +49,30 @@ nav {
     justify-content: flex-end;
     padding: 0 2rem .3rem;
     font-size: 2rem;
+    margin: .3rem 0;
 }
+
+header nav a {
+    background-color: rgb(194, 149, 208);
+    margin: .5rem;
+    padding: .5rem;
+    text-align: center;
+    border-radius: 6pt;
+}
+
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: underline;}
+a:active {text-decoration: underline; color: #fde6ff;}
 
 /* Main section */
 /* Make it so that the "About Me" title sits above the about me body when the screen gets smaller. */
+.with-pic {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .about-me {
     display: flex;
     flex-wrap: wrap;
@@ -62,12 +82,16 @@ nav {
     min-height: 100%;
     border-radius: 0 8pt 8pt 0;
     max-width: 70%;
-    outline-style: dotted;
+    min-width: 65%;
+    transition: flex-direction .5s ease-in-out;
+   /* outline-style: dotted;
     outline-color: rgb(230, 146, 240);
-    outline-width: .4rem
+    outline-width: .4rem */
 }
 
 .about-me h2 {
+    display: flex;
+    flex-wrap: wrap;
     font-size: 3rem;
     padding: 1rem 2rem 1rem 1rem;
 }
@@ -75,13 +99,30 @@ nav {
 .about-body {
     min-height: 20rem;
     padding: 1rem 1rem .5rem 2rem;
-    background-color:rgb(230, 146, 240);
+    background-color:rgb(194, 149, 208);
     border-radius: 0 8pt 8pt 0;
     margin: 2rem 1rem 2rem 0;
     min-width: 70%;
     opacity: 1.0;
 }
 
+/* figure */
+
+.indigo {
+    display: flex;
+    flex-direction: row;
+    margin-left: 7rem;
+}
+
+.profile-pic {
+    display: flex;
+    align-self: flex-end;
+    border-radius: 50%;
+    width: 30rem;
+    height: 30rem;
+    margin: 1rem;
+    flex-shrink: 75%;
+}
 /*
 .about-body:hover{
     opacity: 1.0;
@@ -92,12 +133,12 @@ Kind of fun... not sure yet lol. */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 1rem 0 5rem 6rem;
+    margin: 1rem 0 3rem 6rem;
     background-color: white;
     border-radius: 8pt 0 0 8pt;
-    outline-style: dotted;
+    /* outline-style: dotted;
     outline-color: rgb(230, 146, 240);
-    outline-width: .4rem;
+    outline-width: .4rem;*/
 }
 
 .my-work h2 {
@@ -119,7 +160,7 @@ Kind of fun... not sure yet lol. */
 }
 
 .applications div {
-    background-color:rgb(230, 146, 240);
+    background-color:rgb(194, 149, 208);
     margin: 1.5rem;
     min-width: 40%;
 }
@@ -140,7 +181,72 @@ Kind of fun... not sure yet lol. */
     flex: 1 1 auto;
 }
 
+
 /* Footer. Check out https://www.web-eau.net/blog/10-best-footer-html-css-snippets for a good footer idea! */
+footer .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact h2 {
+    display: flex;
+    font-size: 3rem;
+    padding: 4rem 3rem 4rem 3rem;
+    margin: .4rem 1rem 4rem 1rem;
+    background-color: white;
+    border-radius: 8pt;
+}
+
+/* I do want to get the underline off of the gmail until hover. And I want this centered. */
+.email {
+    display: flex;
+    padding: 4rem 3rem 4rem 3rem;
+    margin: .4rem 1rem 4rem 1rem;
+    background-color: white;
+    border-radius: 8pt;
+}
+
+.email a {
+    font-size: 1.8rem;
+    color: black;
+}
+
+.social {
+    display: flex;
+    padding: 4rem 3rem 4rem 3rem;
+    margin: 4rem 1rem 4rem 1rem;
+    background-color: white;
+    border-radius: 8pt;
+}
+
+.social a {
+    max-width: 7rem;
+}
+
+
+/* When the screen is 973px or less, the image falls under the about me section */
+@media screen and (max-width: 973px) {
+   
+    .about-me h2 {
+        order: 1;
+    } 
+
+    .about-body {
+        order: 2;
+    }
+
+    .about-me {
+        flex-direction: column;
+    }
+
+    .with-pic {
+        flex-direction: column;
+    }
+
+}
 
 /* When the screen is 768px or less, the navigation links fall under the title */
 @media screen and (max-width: 768px) {
