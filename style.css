@@ -7,12 +7,11 @@
     --fn-size: 3rem;
     --pink: #fde6ff;
     --b-style: solid;
-    --fn-color: black;
+    --fn-color: rgb(25, 25, 25);
     --shadow-color: rgb(164, 135, 173);
+    --app-fn-size: 2.2rem;
 }
 
-
-/* Make base font-size 62.5% so that 1rem is 10px */
 html {
     font-size: 62.5%;
 }
@@ -22,6 +21,7 @@ body {
     line-height: 1.5;
     background-color: var(--pink);
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--fn-color)
 }
 
 h1,
@@ -58,6 +58,12 @@ header h1{
     font-size: 5rem;
 }
 
+header h2 {
+    padding: .5rem 2rem .5rem;
+    font-size: var(--fn-size);
+}
+
+/* Navigation buttons */
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -77,7 +83,7 @@ header nav a {
     color: var(--fn-color);
 }
 
-/* Pseudo classes for navigation links */ 
+/* Pseudo classes for navigation buttons */ 
 .nav-button a:link {
     text-decoration: none;
 }
@@ -94,6 +100,8 @@ header nav a {
 
 
 /* Main section */
+
+/* About Me section. Includes text and profile photo. */
 .with-pic {
     display: flex;
     flex-direction: row;
@@ -124,42 +132,38 @@ header nav a {
 }
 
 .about-body {
+    display: flex;
+    flex-wrap: wrap;
     min-height: 20rem;
-    padding: 1rem 1rem .5rem 2rem;
+    max-width: 520px;
+    padding: 1.2rem 1.2rem 1rem 2rem;
     background-color: var(--main-purple);
     border-radius: 0 var(--b-radius) var(--b-radius) 0;
     margin: 2rem 1rem 2rem 0;
     min-width: 70%;
     opacity: 1.0;
+
 }
 
-/* figure */
+/* Profile Photo */
 .indigo {
     display: flex;
     flex-direction: row;
-    margin-left: 3rem;
-    margin-bottom: .5rem;
+    margin: 1.5rem 2rem 2.5rem 3rem;
 }
 
 .profile-pic {
     display: flex;
     align-self: flex-end;
     border-radius: 50%;
-    width: 27rem;
-    height: 27rem;
-    margin: 1rem;
-    flex-shrink: 1;
+    max-width: 24rem;
     outline-offset: .8rem;
     outline-style: var(--b-style);
     outline-color: var(--outline);
     outline-width: var(--b-width);
 }
-/*
-.about-body:hover{
-    opacity: 1.0;
-} 
-Kind of fun... not sure yet lol. */
 
+/* My Work section. Includes all applications. */
 .my-work {
     display: flex;
     flex-wrap: wrap;
@@ -188,6 +192,7 @@ Kind of fun... not sure yet lol. */
     flex-wrap: wrap;
 }
 
+/* Applications 1-5 */
 .applications {
     display: flex;
     flex-wrap: wrap;
@@ -198,28 +203,27 @@ Kind of fun... not sure yet lol. */
     justify-content: space-evenly;
 }
 
-.applications div {
+.applications section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     background-color:var(--main-purple);
     margin: 1.5rem;
     min-width: 34%;
     border-radius: var(--b-radius);
 }
 
-
-/*pseudo classes for applications */
-.applications div:hover {
-    box-shadow: 8pt 6pt var(--shadow-color);
-}
-
-.applications div:active {
-    opacity: 60%;
-    box-shadow: 8pt 6pt var(--shadow-color);
-}
-
 .applications img {
     border-radius: var(--b-radius) var(--b-radius) 0 0;
 }
 
+.applications section p {
+    font-size: var(--app-fn-size);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 1 */
 .first-app {
     display: flex;
     flex-wrap: wrap;
@@ -235,6 +239,7 @@ Kind of fun... not sure yet lol. */
     object-fit: contain;
 }
 
+/* 2 */
 .second-app {
     display: flex;
     flex-wrap: wrap;
@@ -248,6 +253,7 @@ Kind of fun... not sure yet lol. */
     object-fit: contain;
 }
 
+/* 3 */
 .third-app {
     display: flex;
     flex-wrap: wrap;
@@ -261,6 +267,7 @@ Kind of fun... not sure yet lol. */
     object-fit: contain;
 }
 
+/* 4 */
 .fourth-app {
     display: flex;
     flex-wrap: wrap;
@@ -274,6 +281,7 @@ Kind of fun... not sure yet lol. */
     object-fit: contain;
 }
 
+/* 5 */
 .fifth-app {
     display: flex;
     flex-wrap: wrap;
@@ -287,11 +295,25 @@ Kind of fun... not sure yet lol. */
     object-fit: contain;
 }
 
-/* Footer. Check out https://www.web-eau.net/blog/10-best-footer-html-css-snippets for a good footer idea! */
-footer .contact {
+/* Pseudo classes for applications */
+.applications section:hover {
+    box-shadow: 8pt 6pt var(--shadow-color);
+}
+.applications section:active {
+    opacity: 60%;
+    box-shadow: 8pt 6pt var(--shadow-color);
+}
+
+
+/* Footer section. Icludes all contact information and credit for images. */
+footer {
+    padding: 4rem;
+}
+
+.contact {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -307,7 +329,7 @@ footer .contact {
     border-radius: var(--b-radius);
 }
 
-/* I do want to get the underline off of the gmail until hover. And I want this centered. */
+/* Email */
 .email {
     display: flex;
     padding: 4rem 3rem 4rem 3rem;
@@ -324,14 +346,16 @@ footer .contact {
     text-decoration: none;
 }
 
+.email:hover {
+    text-decoration: underline;
+}
+
+/* Social Media */
 .social {
     display: flex;
     flex-direction: row;
-    padding: 4rem 3rem 4rem 3rem;
-    margin: .4rem 1rem 4rem 1rem;
     justify-content: space-evenly;
     align-items: center;
-    /*border-radius: var(--b-radius);*/
 }
 
 .social a {
@@ -340,27 +364,40 @@ footer .contact {
     display: flex;
 }
 
+/* Credit for photos and icons */
+.credit {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: .3rem;
+}
 
-/* When the screen is 973px or less, the image falls under the about me section */
-@media screen and (max-width: 973px) {
-   
+
+/* Media Queries */
+
+@media screen and (max-width: 1020px) {
     .about-me h2 {
         order: 1;
     } 
-
     .about-body {
         order: 2;
     }
-
     .about-me {
         flex-direction: column;
     }
-
     .with-pic {
         flex-direction: column;
     }
-
+    .profile-pic {
+        position: relative;
+        left: 40%;
+        width: 20rem;
+     }
 }
+/* When the screen is 973px or less, the image falls under the about me section. */
+
 
 /* When the screen is 768px or less, the navigation links fall under the title */
 @media screen and (max-width: 768px) {
@@ -369,5 +406,29 @@ footer .contact {
         flex-direction: column;
         align-items: center;
     }
+
+    header section {
+        text-align: center;
+    }
+
+    .applications section p {
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+    }
 }
 
+/* When the screen is 464px or less... Everything adjusts so that the text fits.*/
+@media screen and (max-width: 464px) {
+    .applications {
+        justify-content: space-around;
+    }
+
+    .applications img {
+        border-radius: var(--b-radius);
+    }
+
+    .applications section p {
+        font-size: .75rem;
+    }
+}
