@@ -13,6 +13,6 @@ The purpose of this project was to create a functional portfolio for my work as 
 6. The page is adaptable to the user's viewport.
 
 ## Video of Page
-https://github.com/IndigoFobes/my-pro-portfolio/issues/1#issue-1307180076
+![video] https://github.com/IndigoFobes/my-pro-portfolio/issues/1#issue-1307180076
 
 ## Deployed Application
