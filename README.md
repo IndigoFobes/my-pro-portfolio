@@ -12,7 +12,7 @@ The purpose of this project was to create a functional portfolio for my work as 
 5. When the user clicks on the images of the applications, they are taken to the deployed application.
 6. The page is adaptable to the user's viewport.
 
-## Video of Page
+## Image of Page
 ![Screenshot](/assets/Portfolio-Screenshot.png)
 
 ## Deployed Application
