@@ -13,7 +13,7 @@ The purpose of this project was to create a functional portfolio for my work as 
 6. The page is adaptable to the user's viewport.
 
 ## Image of Page
-![Screenshot](Portfolio-Screenshot.png)
+![Screenshot](Portfolio-Screenshot-2.png)
 
 ## Deployed Application
 Click [here](https://indigofobes.github.io/my-pro-portfolio/develop) for the live URL.
