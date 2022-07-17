@@ -16,3 +16,5 @@ The purpose of this project was to create a functional portfolio for my work as 
 ![Screenshot](Portfolio-Screenshot.png)
 
 ## Deployed Application
+Click [here](https://indigofobes.github.io/my-pro-portfolio/develop) for the live URL.
+Click [here](https://github.com/IndigoFobes/my-pro-portfolio.git) for my GitHub repository.
